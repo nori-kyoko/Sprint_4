@@ -29,6 +29,7 @@ public class OrderPage {
     private final By orderButton = By.xpath("(//button[text()='Заказать'])[2]");
     private final By confirmButton = By.xpath("//button[text()='Да']");
     private final By successModal = By.cssSelector(".Order_ModalHeader__3FDaJ");
+    private final By metroOption = By.cssSelector(".select-search__option");
 
     private final WebDriver driver;
     private final WebDriverWait wait;
@@ -55,9 +56,9 @@ public class OrderPage {
         metroInput.click();
         metroInput.sendKeys(stationName);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".select-search__options")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(metroOption));
 
-        WebElement firstStation = driver.findElement(By.cssSelector(".select-search__option"));
+        WebElement firstStation = driver.findElement(metroOption);
         firstStation.click();
 
     }
