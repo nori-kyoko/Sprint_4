@@ -37,4 +37,5 @@ _macOS Sonoma 14.5_
 
 **Браузеры в которых совершаются тесты:**
 Google Chrome Версия: 139.0.7258.157
-Mozilla Firefox Версия: 145.0.1 **(для вызова тестов использовать в консоли команду "mvn test -Dbrowser=firefox")**
+Mozilla Firefox Версия: 145.0.1 
+Для вызова тестов использовать в консоли команду 'mvn test -Dbrowser=firefox'
